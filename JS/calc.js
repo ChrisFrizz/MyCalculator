@@ -9,7 +9,8 @@ let allBtn = document.querySelectorAll("button");
 allBtn.forEach((btn) => {
     console.log(btn);
     btn.addEventListener("click", (event) =>{
-        console.log(event.target);
+        console.log(event.target.attributes);
+        console.log(val1);
 
         let a = parseFloat(val1.value);
         let b = parseFloat(val2.value);
@@ -36,9 +37,9 @@ allBtn.forEach((btn) => {
             btnLoad.addEventListener("click", myLog.fnLoad);
 
             let logLine = document.createElement("li");
-            logLine.innerText = ("Eseguito: " + myLog.val1 + myLog.operation + myLog.val2);
+            logLine.innerText = `Eseguito ${myLog.val1} ${myLog.operation} ${myLog.val2}`;
 
-            logLine.appendChild(logLine);
+            logLine.appendChild(btnLoad);
             memory.appendChild(logLine);
             
         }
