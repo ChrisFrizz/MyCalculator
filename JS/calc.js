@@ -38,10 +38,13 @@ allBtn.forEach((btn) => {
             let logLine = document.createElement("li");
             logLine.innerText = ("Eseguito: " + myLog.val1 + myLog.operation + myLog.val2);
 
-            memory.appendChild(logLine);
             logLine.appendChild(logLine);
+            memory.appendChild(logLine);
+            
         }
-    })
+        console.log(res);
+        
+    });
 });
 
 
